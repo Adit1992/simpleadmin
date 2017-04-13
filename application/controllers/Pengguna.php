@@ -11,7 +11,7 @@ class Pengguna extends CI_Controller {
 			redirect(base_url());
 		}
 	}
-	
+
 	public function index()
 	{
 		$data = $this->mod_pengguna->index();
@@ -34,30 +34,61 @@ class Pengguna extends CI_Controller {
 	public function tambah()
 	{
 		$nama = $_POST['nama'];
+		$user = $_POST['user'];
+		$lahir = $_POST['lahir'];
+		$alamat = $_POST['alamat'];
+		$kota = $_POST['kota'];
 		$telepon = $_POST['telepon'];
 		$email = $_POST['email'];
 		$sandi = $_POST['sandi'];
+		$foto = $_FILES['foto']['name'];
+		$file_ext	= strtolower(end(explode('.', $foto)));
 
-		$this->db->set('ID_PENGGUNA','UUID()',FALSE);
-
-		$data = array(
-			'NAMA_PENGGUNA' => $nama,
-			'TELEPON_PENGGUNA' => $telepon,
-			'EMAIL_PENGGUNA' => $email,
-			'SANDI_PENGGUNA' => $sandi
-			);
-
-		$data = $this->mod_pengguna->tambah($data);
-
-		if ($data > 0)
+		# ================= Gambar ================= #
+		$stamp = date("his") ; $ip = $_SERVER['REMOTE_ADDR'] ;
+		$nama_file = "$ip-$stamp" ; $nama_file = str_replace(":","",$nama_file) ;
+		$config['upload_path']          = './gambar/';
+		$config['allowed_types']        = 'gif|jpg|jpeg|png';
+		$config['max_size']             = 1000; # maksimum besar file 1M
+		$config['max_width']            = 1024; # lebar maksimum 1000 px
+		$config['max_height']           = 768; # tinggi maksimum 7000 px
+		$config['file_name']			= $nama_file; # rename gambar
+ 
+		$this->load->library('upload', $config);
+ 
+		if (!$this->upload->do_upload('foto'))
 		{
-			$this->session->set_flashdata('pesan','Tambah data sukses...!!!');
-			redirect(base_url('pengguna'));
+			echo "<h1>Tambah gambar gagal !!!</h1>";
 		}
 		else
 		{
-			echo "<h1>Tambah data gagal !!!</h1>";
+			$this->db->set('ID_PENGGUNA','UUID()',FALSE);
+
+			$data = array(
+				'NAMA_PENGGUNA' => $nama,
+				'USER_PENGGUNA' => $user,
+				'LAHIR_PENGGUNA' => $lahir,
+				'ALAMAT_PENGGUNA' => $alamat,
+				'KOTA_PENGGUNA' => $kota,
+				'TELEPON_PENGGUNA' => $telepon,
+				'EMAIL_PENGGUNA' => $email,
+				'SANDI_PENGGUNA' => $sandi,
+				'FOTO_PENGGUNA' => $nama_file.".".$file_ext
+				);
+
+			$data = $this->mod_pengguna->tambah($data);
+
+			if ($data > 0)
+			{
+				$this->session->set_flashdata('pesan','Tambah data sukses...!!!');
+				redirect(base_url('pengguna'));
+			}
+			else
+			{
+				echo "<h1>Tambah data gagal !!!</h1>";
+			}
 		}
+		# ================= Gambar ================= #
 	}
 
 	public function edit()

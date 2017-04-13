@@ -83,16 +83,36 @@
         </div>
         <!-- body modal -->
         
-        <form action="<?= base_url('pengguna/tambah') ?>" role="form" method="POST">
+        <!-- <form action="#" role="form" enctype="multipart/form-data" method="POST"> -->
+        <?php echo form_open_multipart('pengguna/tambah');?>
           <div class="modal-body">
             <!-- text input -->
             <div class="form-group">
-              <label>Nama</label>
-              <input type="text" class="form-control" name="nama" pattern="[A-z a-z]+" placeholder="Isikan nama Pengguna..." required>
+              <label>Nama Lengkap</label>
+              <input type="text" class="form-control" name="nama" pattern="[A-Z a-z]+" placeholder="Isikan nama lengkap Pengguna..." required>
+            </div>
+            <div class="form-group">
+              <label>Username</label>
+              <input type="text" class="form-control" name="user" pattern="[A-Z a-z 0-9]+" placeholder="Isikan Username..." required>
             </div>
             <div class="form-group">
               <label>Telepon</label>
               <input type="text" class="form-control" name="telepon" pattern="[0-9]+" placeholder="Isikan telepon Pengguna..." required>
+            </div>
+            <div class="form-group">
+              <label>Tanggal Lahir</label>
+              <div class="input-group date">
+                <div class="input-group-addon"><i class="fa fa-calendar"></i></div>
+                <input type="date" class="form-control pull-right" name="lahir" id="datepicker" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Alamat</label>
+              <input type="text" class="form-control" name="alamat" pattern="[A-Z a-z 0-9 . -]+" placeholder="Isikan alamat Pengguna..." required>
+            </div>
+            <div class="form-group">
+              <label>Kota</label>
+              <input type="text" class="form-control" name="kota" pattern="[A-Z a-z]+" placeholder="Isikan kota Pengguna..." required>
             </div>
             <div class="form-group">
               <label>Email</label>
@@ -101,6 +121,10 @@
             <div class="form-group">
               <label>Sandi</label>
               <input type="password" class="form-control" name="sandi" placeholder="Isikan sandi Pengguna..." required>
+            </div>
+            <div class="form-group">
+              <label>Foto</label>
+              <input type="file" class="form-control" name="foto" accept="image/jpeg,image/jpg,image/png" required>
             </div>
           </div>
           <!-- footer modal -->
