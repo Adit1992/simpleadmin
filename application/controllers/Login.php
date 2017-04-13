@@ -3,21 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index()
 	{
 		$this->load->view('head/login');
@@ -35,24 +20,30 @@ class Login extends CI_Controller {
 			'EMAIL_PENGGUNA' => $email,
 			'SANDI_PENGGUNA' => $sandi
 			);
-		$cek = $this->mod_login->index($where)->num_rows();
-		if($cek > 0){
+		$cek = $this->mod_login->index($where);
+		$hasil = $cek->num_rows();
+		if($hasil > 0){
+			$row = $cek->row_array();
+			$nama =  $row['NAMA_PENGGUNA'];
+			$id =  $row['ID_PENGGUNA'];
 			$data_session = array(
-				'nama' => $email,
+				'id_pengguna' => $id,
 				'status' => "login"
 				);
  
-			$this->session->set_flashdata($data_session);
+			$this->session->set_userdata($data_session);
+
+			$this->session->set_flashdata("pesan","Selamat datang $nama !");
  
 			redirect(base_url("beranda"));
 		}else{
 			echo "Username dan password salah !";
 		}
 	}
- 
+
 	function logout()
 	{
 		$this->session->sess_destroy();
-		redirect(base_url('login'));
+		redirect(base_url());
 	}
 }

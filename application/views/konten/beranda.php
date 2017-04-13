@@ -15,11 +15,11 @@
     <!-- Small boxes (Stat box) -->
     <div class="row">
 
-      <?php if (!empty($this->session->flashdata('status'))) { ?>
+      <?php if ($this->session->flashdata('pesan')) { ?>
         <div class="col-xs-12">
           <div class="alert alert-success alert-dismissible">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            <center><b>Selamat datang <?= $this->session->flashdata("nama"); ?></b></center>
+            <center><b><?= $this->session->flashdata("pesan"); ?></b></center>
           </div>
         </div>
       <?php } ?>

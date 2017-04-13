@@ -2,6 +2,16 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Pengguna extends CI_Controller {
+
+	function __construct()
+	{
+		parent::__construct();
+		if(!$this->session->userdata('id_pengguna'))
+		{
+			redirect(base_url());
+		}
+	}
+	
 	public function index()
 	{
 		$data = $this->mod_pengguna->index();
