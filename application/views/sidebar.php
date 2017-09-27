@@ -34,8 +34,8 @@
         </span>
       </a>
       <ul class="treeview-menu">
-        <li><a href="<?= base_url('beranda') ?>"><i class="fa fa-circle-o"></i> Beranda</a></li>
-        <li><a href="<?= base_url('pengguna') ?>"><i class="fa fa-circle-o"></i> Pengguna</a></li>
+        <li><a href="<?= site_url('beranda') ?>"><i class="fa fa-circle-o"></i> Beranda</a></li>
+        <li><a href="<?= site_url('pengguna') ?>"><i class="fa fa-circle-o"></i> Pengguna</a></li>
       </ul>
     </li>
 
@@ -46,10 +46,7 @@
         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
       </a>
       <ul class="treeview-menu">
-        <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-        <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-        <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-        <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+        <li><a href="<?= site_url('perusahaan') ?>"><i class="fa fa-circle-o"></i> Data Perusahaan</a></li>
       </ul>
     </li>
 
@@ -74,10 +71,8 @@
         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
       </a>
       <ul class="treeview-menu">
-        <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-        <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-        <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-        <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+        <li><a href="<?= site_url('provinsi') ?>"><i class="fa fa-circle-o"></i> Provinsi</a></li>
+        <li><a href="<?= site_url('kota') ?>"><i class="fa fa-circle-o"></i> Kota</a></li>
       </ul>
     </li>
   </ul>

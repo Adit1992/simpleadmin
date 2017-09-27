@@ -42,7 +42,9 @@ class Pengguna extends CI_Controller {
 		$email = $_POST['email'];
 		$sandi = $_POST['sandi'];
 		$foto = $_FILES['foto']['name'];
-		$file_ext	= strtolower(end(explode('.', $foto)));
+		
+		$file_ext = explode('.', $foto);
+		$file_ext = strtolower(array_pop($file_ext));
 
 		# ================= Gambar ================= #
 		$stamp = date("his") ; $ip = $_SERVER['REMOTE_ADDR'] ;
@@ -51,7 +53,7 @@ class Pengguna extends CI_Controller {
 		$config['allowed_types']        = 'gif|jpg|jpeg|png';
 		$config['max_size']             = 1000; # maksimum besar file 1M
 		$config['max_width']            = 1024; # lebar maksimum 1000 px
-		$config['max_height']           = 768; # tinggi maksimum 7000 px
+		$config['max_height']           = 1024; # tinggi maksimum 1000 px
 		$config['file_name']			= $nama_file; # rename gambar
  
 		$this->load->library('upload', $config);
@@ -62,7 +64,7 @@ class Pengguna extends CI_Controller {
 		}
 		else
 		{
-			$this->db->set('ID_PENGGUNA','UUID()',FALSE);
+			# $this->db->set('ID_PENGGUNA','UUID()',FALSE);
 
 			$data = array(
 				'NAMA_PENGGUNA' => $nama,

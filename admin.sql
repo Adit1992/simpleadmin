@@ -3,8 +3,8 @@
 /*==============================================================*/
 create table KOTA 
 (
-   ID_KOTA              char(5)                        not null,
-   ID_PROVINSI          char(3),
+   ID_KOTA              integer          not null AUTO_INCREMENT,
+   ID_PROVINSI          integer,
    NAMA_KOTA            varchar(50),
    constraint PK_KOTA primary key (ID_KOTA)
 );
@@ -28,7 +28,7 @@ ID_PROVINSI ASC
 /*==============================================================*/
 create table PENGGUNA 
 (
-   ID_PENGGUNA          char(36)                       not null,
+   ID_PENGGUNA          integer           not null AUTO_INCREMENT,
    NAMA_PENGGUNA        varchar(50),
    USER_PENGGUNA        varchar(30),
    LAHIR_PENGGUNA       date,
@@ -53,7 +53,7 @@ ID_PENGGUNA ASC
 /*==============================================================*/
 create table PENJUALAN 
 (
-   ID_PENJUALAN         char(36)                       not null,
+   ID_PENJUALAN         integer           not null AUTO_INCREMENT,
    USER_PENJUALAN       varchar(30),
    PERUSAHAAN_PENJUALAN varchar(50),
    TIPE_PENJUALAN       varchar(10),
@@ -74,7 +74,7 @@ ID_PENJUALAN ASC
 /*==============================================================*/
 create table PERUSAHAAN 
 (
-   ID_PERUSAHAAN        varchar(36)                    not null,
+   ID_PERUSAHAAN        integer           not null AUTO_INCREMENT,
    NAMA_PERUSAHAAN      varchar(50),
    ALAMAT_PERUSAHAAN    varchar(80),
    KOTA_PERUSAHAAN      varchar(20),
@@ -99,7 +99,7 @@ ID_PERUSAHAAN ASC
 /*==============================================================*/
 create table PROVINSI 
 (
-   ID_PROVINSI          char(3)                        not null,
+   ID_PROVINSI          integer          not null AUTO_INCREMENT,
    NAMA_PROVINSI        varchar(50),
    constraint PK_PROVINSI primary key (ID_PROVINSI)
 );

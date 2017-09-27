@@ -23,8 +23,7 @@
 <!-- page script -->
 <script>
 $(function (){
-  $("#example1").DataTable();
-  $('#example2').DataTable({
+  $('#tabel_pengguna').DataTable({
     "paging": true,
     "lengthChange": true,
     "searching": true,

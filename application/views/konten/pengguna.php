@@ -29,7 +29,7 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <table id="example2" class="table table-bordered table-hover">
+            <table id="tabel_pengguna" class="table table-bordered table-hover">
               <thead>
               <tr>
                 <th style="width:10px">No.</th>

@@ -79,4 +79,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('mod_pengguna','mod_login');
+$autoload['model'] = array('mod_pengguna','mod_perusahaan','mod_provinsi','mod_kota','mod_login');

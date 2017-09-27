@@ -2,10 +2,9 @@
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <section class="content-header">
-    <h1>Data Perusahaan</h1>
+    <h1>Data Kota</h1>
     <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li><a href="#">Tables</a></li>
       <li class="active">Data tables</li>
     </ol>
   </section>
@@ -24,33 +23,29 @@
       
         <div class="box">
           <div class="box-header">
-            <h3 class="box-title"><b>User</b></h3>
-            <button class="btn btn-info pull-right" onclick="tambah_perusahaan()">Tambah</button>
+            <h3 class="box-title"><b>Kota</b></h3>
+            <button class="btn btn-info pull-right" onclick="tambah_kota()">Tambah</button>
           </div>
           <!-- /.box-header -->
           <div class="box-body">
-            <table id="tabel_perusahaan" class="table table-bordered table-hover">
+            <table id="tabel_kota" class="table table-bordered table-hover">
               <thead>
               <tr>
                 <th style="width:10px">No.</th>
-                <th>Nama Perusahaan</th>
-                <th>Badan Hukum</th>
-                <th>Telepon</th>
-                <th>Email</th>
+                <th>Provinsi</th>
+                <th>Kota</th>
                 <th>Aksi</th>
               </tr>
               </thead>
               <tbody>
-              <?php $no = 1; foreach ($data as $D) { ?>
+              <?php $no = 1; foreach ($kota as $D) { ?>
                 <tr>
                   <td><?= $no++."." ?></td>
-                  <td><?= $D['NAMA_PERUSAHAAN'] ?></td>
-                  <td><?= $D['BADAN_PERUSAHAAN'] ?></td>
-                  <td><?= $D['TELEPON_PERUSAHAAN'] ?></td>
-                  <td><?= $D['EMAIL_PERUSAHAAN'] ?></td>
+                  <td><?= $D['NAMA_PROVINSI'] ?></td>
+                  <td><?= $D['NAMA_KOTA'] ?></td>
                   <td>
-                    <button class="btn btn-sm btn-warning" onclick="edit_perusahaan(<?= $D['ID_PERUSAHAAN'] ?>)"><i class="glyphicon glyphicon-pencil"></i></button>
-                    <button class="btn btn-sm btn-danger" onclick="hapus_perusahaan(<?= $D['ID_PERUSAHAAN'] ?>)"><i class="glyphicon glyphicon-remove"></i></button>
+                  	<button class="btn btn-sm btn-warning" onclick="edit_kota(<?= $D['ID_KOTA'] ?>)"><i class="glyphicon glyphicon-pencil"></i></button>
+                  	<button class="btn btn-sm btn-danger" onclick="hapus_kota(<?= $D['ID_KOTA'] ?>)"><i class="glyphicon glyphicon-remove"></i></button>
                   </td>
                 </tr>
               <?php } ?>
@@ -58,10 +53,8 @@
               <tfoot>
               <tr>
                 <th>No.</th>
-                <th>Nama Perusahaan</th>
-                <th>Badan Hukum</th>
-                <th>Telepon</th>
-                <th>Email</th>
+                <th>Provinsi</th>
+                <th>Kota</th>
                 <th>Aksi</th>
               </tr>
               </tfoot>

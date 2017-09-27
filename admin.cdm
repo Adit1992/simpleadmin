@@ -1319,10 +1319,9 @@ EntityComment 0 Arial,8,N</a:FontList>
 <a:Code>ID_PENGGUNA</a:Code>
 <a:CreationDate>1491986928</a:CreationDate>
 <a:Creator>lenovo</a:Creator>
-<a:ModificationDate>1491986928</a:ModificationDate>
+<a:ModificationDate>1492416230</a:ModificationDate>
 <a:Modifier>lenovo</a:Modifier>
-<a:DataType>A36</a:DataType>
-<a:Length>36</a:Length>
+<a:DataType>I</a:DataType>
 </o:DataItem>
 <o:DataItem Id="o20">
 <a:ObjectID>17AF5DAB-3CEC-426E-807D-CD909AE11C3F</a:ObjectID>
@@ -1374,10 +1373,9 @@ EntityComment 0 Arial,8,N</a:FontList>
 <a:Code>ID_PERUSAHAAN</a:Code>
 <a:CreationDate>1492066139</a:CreationDate>
 <a:Creator>lenovo</a:Creator>
-<a:ModificationDate>1492066139</a:ModificationDate>
+<a:ModificationDate>1492416248</a:ModificationDate>
 <a:Modifier>lenovo</a:Modifier>
-<a:DataType>VA36</a:DataType>
-<a:Length>36</a:Length>
+<a:DataType>I</a:DataType>
 </o:DataItem>
 <o:DataItem Id="o41">
 <a:ObjectID>BA28E448-B967-4684-BE9D-A81F8EA7ABF3</a:ObjectID>
@@ -1484,10 +1482,9 @@ EntityComment 0 Arial,8,N</a:FontList>
 <a:Code>ID_PROVINSI</a:Code>
 <a:CreationDate>1492066364</a:CreationDate>
 <a:Creator>lenovo</a:Creator>
-<a:ModificationDate>1492066364</a:ModificationDate>
+<a:ModificationDate>1492416286</a:ModificationDate>
 <a:Modifier>lenovo</a:Modifier>
-<a:DataType>A3</a:DataType>
-<a:Length>3</a:Length>
+<a:DataType>I</a:DataType>
 </o:DataItem>
 <o:DataItem Id="o62">
 <a:ObjectID>F2B1437C-1284-411A-B9EA-52D1A324D28D</a:ObjectID>
@@ -1506,10 +1503,9 @@ EntityComment 0 Arial,8,N</a:FontList>
 <a:Code>ID_KOTA</a:Code>
 <a:CreationDate>1492066503</a:CreationDate>
 <a:Creator>lenovo</a:Creator>
-<a:ModificationDate>1492066503</a:ModificationDate>
+<a:ModificationDate>1492416274</a:ModificationDate>
 <a:Modifier>lenovo</a:Modifier>
-<a:DataType>A5</a:DataType>
-<a:Length>5</a:Length>
+<a:DataType>I</a:DataType>
 </o:DataItem>
 <o:DataItem Id="o67">
 <a:ObjectID>55D2C52D-2751-45A4-9ACA-6E83277C2CD8</a:ObjectID>
@@ -1582,10 +1578,9 @@ EntityComment 0 Arial,8,N</a:FontList>
 <a:Code>ID_PENJUALAN</a:Code>
 <a:CreationDate>1492067306</a:CreationDate>
 <a:Creator>lenovo</a:Creator>
-<a:ModificationDate>1492067306</a:ModificationDate>
+<a:ModificationDate>1492416262</a:ModificationDate>
 <a:Modifier>lenovo</a:Modifier>
-<a:DataType>A36</a:DataType>
-<a:Length>36</a:Length>
+<a:DataType>I</a:DataType>
 </o:DataItem>
 <o:DataItem Id="o74">
 <a:ObjectID>4E42E62C-50B6-4F97-80CC-EFEB249C4B2A</a:ObjectID>

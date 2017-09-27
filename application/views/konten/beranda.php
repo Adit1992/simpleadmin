@@ -1,6 +1,4 @@
-<div class="wrapper">
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+<div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>Dashboard <small>Control panel</small></h1>
@@ -16,7 +14,7 @@
     <div class="row">
 
       <?php if ($this->session->flashdata('pesan')) { ?>
-        <div class="col-xs-12">
+        <div class="col-lg-12">
           <div class="alert alert-success alert-dismissible">
             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
             <center><b><?= $this->session->flashdata("pesan"); ?></b></center>
@@ -91,5 +89,4 @@
 
   </section>
   <!-- /.content -->
-  </div>
 </div>

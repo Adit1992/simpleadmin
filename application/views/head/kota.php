@@ -15,14 +15,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 	<!-- Ionicons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+    <link href="<?= base_url('assets/plugins/datatables/dataTables.bootstrap.css') ?>" rel="stylesheet">
+
     <link href="<?= base_url('assets/dist/css/AdminLTE.min.css') ?>" rel="stylesheet">
+
     <link href="<?= base_url('assets/dist/css/skins/_all-skins.min.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/plugins/iCheck/flat/blue.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/plugins/morris/morris.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/plugins/jvectormap/jquery-jvectormap-1.2.2.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/plugins/datepicker/datepicker3.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/plugins/daterangepicker/daterangepicker.css') ?>" rel="stylesheet">
-    <link href="<?= base_url('assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') ?>" rel="stylesheet">    
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
